@@ -1,0 +1,976 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    html {
+        font-family: 'Open Sans', sans-serif;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    #wrapper {
+        width: 100%;
+        height: 100%;
+    }
+    
+    #header {
+        width: 100%;
+        height: auto;
+    }
+    
+    .header-menu {
+        display: flex;
+        width: 100%;
+        height: 80px;
+        position: fixed;
+        background-color: #fff;
+        z-index: 20;
+        top: 0;
+    }
+    
+    .logo {
+        flex: 1;
+    }
+    
+    .logo img {
+        width: 180px;
+        margin: 15px 15px;
+    }
+    
+    .nav {
+        flex: 3;
+    }
+    
+    .nav>ul {
+        list-style: none;
+        display: flex;
+    }
+    
+    .nav>ul>li {
+        margin: 0 25px;
+        position: relative;
+    }
+    
+    .fa-chevron-down {
+        font-size: 12px;
+    }
+    
+    .nav>ul>li>a {
+        text-decoration: none;
+        color: black;
+        line-height: 80px;
+        font-size: 18px;
+        font-weight: 800;
+    }
+    
+    .sub-nav {
+        list-style: none;
+        box-shadow: 0 5px 3px rgba(0, 0, 0, 0.3);
+        min-width: 200px;
+        position: absolute;
+        background-color: #fff;
+        display: none;
+    }
+    
+    .sub-nav>li>a {
+        text-decoration: none;
+        display: block;
+        font-size: 15px;
+        line-height: 35px;
+        text-indent: 10px;
+        border-top: 1px solid rgb(231, 231, 231);
+        color: rgb(49, 46, 46);
+        opacity: 0.8;
+    }
+    
+    .sub-nav>li:hover a {
+        background-color: rgb(125, 198, 66);
+        color: #fff;
+        opacity: 1;
+    }
+    
+    .nav>ul>li:hover .sub-nav {
+        display: block;
+    }
+    
+    .nav>ul>li::after {
+        content: "";
+        height: 2.5px;
+        width: 0px;
+        background: rgb(125, 198, 66);
+        position: absolute;
+        bottom: 20px;
+        left: 0px;
+        transition: all 0.4s ease-in;
+    }
+    
+    .nav>ul>li:hover::after {
+        width: 100%;
+    }
+    
+    .search {
+        flex: 2;
+        display: flex;
+    }
+    
+    .search-input {
+        background-color: rgb(235, 229, 229);
+        display: inline-block;
+        margin-top: 25px;
+        border-radius: 20px;
+        width: 185px;
+        height: 30px;
+    }
+    
+    .search-input input {
+        width: 150px;
+        height: 30px;
+        border: none;
+        text-indent: 8px;
+        background-color: rgb(235, 229, 229);
+        outline: none;
+        border-radius: 20px;
+        vertical-align: middle;
+    }
+    
+    .search-input a {
+        border-radius: 20px;
+        display: inline-block;
+        height: 29px;
+        text-decoration: none;
+        text-align: center;
+        color: #000;
+    }
+    
+    .search-input .fa-search {
+        font-size: 15px;
+    }
+    
+    .icon-menu {
+        list-style: none;
+        display: flex;
+        margin-top: 28px;
+    }
+    
+    .icon-menu li {
+        margin: 0 15px;
+        padding-left: 5px;
+    }
+    
+    .icon-menu li a {
+        text-decoration: none;
+        font-size: 18px;
+        color: rgb(179, 179, 179);
+        display: block;
+    }
+    
+    .search a:hover {
+        color: rgb(125, 198, 66);
+        transition: all 0.4s ease-in;
+    }
+    /* css banner */
+    
+    .banner {
+        margin-top: 80px;
+        width: 100%;
+        height: auto;
+        overflow-x: hidden;
+    }
+    
+    .banner img {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+    }
+    
+    .text-banner {
+        position: absolute;
+        top: 300px;
+        left: 80px;
+        line-height: 40px;
+    }
+    
+    .text-banner .title-name {
+        text-transform: capitalize;
+        font-size: 18px;
+    }
+    
+    .text-banner h1 {
+        font-size: 26px;
+    }
+    
+    .text-banner {
+        animation: textbannerAM 1.5s linear;
+    }
+    
+    @keyframes textbannerAM {
+        0% {
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+    
+    .banner h1 {
+        text-transform: uppercase;
+        font-weight: 800;
+    }
+    
+    .banner .description {
+        opacity: 0.6;
+    }
+    
+    .banner .text-banner .buy-now {
+        text-decoration: none;
+        border: 1px solid #000;
+        display: inline-block;
+        width: 100px;
+        border-radius: 5px;
+        text-align: center;
+        color: #000;
+        font-weight: initial;
+        font-size: 15px;
+        text-transform: capitalize;
+    }
+    
+    .banner .text-banner .buy-now:hover {
+        background-color: rgb(125, 198, 66);
+        transition: 0.5s ease-in;
+        color: #fff;
+    }
+    /* phần content */
+    
+    #content {
+        width: 100%;
+    }
+    
+    #content .gioithieu {
+        width: 1100px;
+        margin: auto;
+        margin-top: 90px;
+    }
+    
+    .list-gioithieu {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: space-between;
+    }
+    
+    .list-gioithieu li {
+        list-style: none;
+        border: 1px solid rgb(125, 198, 66);
+        width: 348px;
+        height: 237px;
+        position: relative;
+    }
+    
+    .list-gioithieu li a {
+        border: 2px solid green;
+        background-color: #fff;
+        display: inline-block;
+        border-radius: 50%;
+        width: 90px;
+        height: 90px;
+        position: absolute;
+        top: -45px;
+        left: 127.7px;
+        align-items: center;
+    }
+    
+    .list-gioithieu li a img {
+        margin-top: 15px;
+        transition: 0.6s ease-out;
+    }
+    
+    .noidungGT h2 {
+        margin-top: 60px;
+        line-height: 30px;
+        font-weight: 600;
+    }
+    
+    .noidungGT p {
+        margin: 10px 0px;
+        color: rgb(85, 84, 84);
+        line-height: 30px;
+    }
+    
+    .list-gioithieu li a img:hover {
+        transform: scale(1.1);
+    }
+    /* sale */
+    /* nội dung trên  */
+    
+    .wrapper-sale {
+        width: 100%;
+        height: auto;
+        margin: 15px auto;
+        overflow-x: hidden;
+    }
+    
+    .wrapper-sale>h2 {
+        text-transform: uppercase;
+        color: rgb(160, 168, 71);
+        margin-top: 15px;
+        font-size: 25px;
+        text-align: center;
+    }
+    
+    .wrapper-sale>img {
+        margin: 0 47.5%;
+    }
+    
+    .noidungtren {
+        display: flex;
+        justify-content: space-around;
+        width: 1200px;
+        margin: 20px auto;
+    }
+    
+    .image_sale {
+        width: 40%;
+    }
+    
+    .image_sale>img {
+        width: 450px;
+        margin-left: 30px;
+    }
+    
+    .thoigiansukien {
+        width: 60%;
+    }
+    
+    .thoigiansukien>h3 {
+        color: rgb(241, 69, 69);
+        font-size: 18px;
+        font-weight: bold;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .thoigiansukien>p {
+        padding-top: 10px;
+        line-height: 30px;
+        opacity: 0.6;
+        font-size: 15px;
+    }
+    
+    .khunggio {
+        width: 600px;
+        height: 120px;
+        background-color: rgb(183, 220, 54);
+        margin: 25px auto;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .khunggio ul {
+        list-style: none;
+        display: flex;
+    }
+    
+    .khunggio ul li {
+        flex: 1;
+        margin-top: 25px;
+        height: 80px;
+    }
+    
+    .khunggio ul li p {
+        color: #fff;
+        font-size: 25px;
+    }
+    
+    .boder-right {
+        border-right: 1px solid #fff;
+    }
+    
+    .thoigiansukien .btn_xemngay {
+        width: 130px;
+        height: 40px;
+        border: 1px solid rgb(183, 220, 54);
+        display: block;
+        line-height: 40px;
+        color: rgb(145, 173, 65);
+        text-align: center;
+        margin: auto;
+    }
+    
+    .thoigiansukien .btn_xemngay:hover {
+        background-color: rgb(183, 220, 54);
+        color: #fff;
+        transition: 0.4s ease-in;
+    }
+    /* nội dung dưới */
+    
+    .noidungduoi {
+        display: flex;
+        color: #555555;
+        font-style: italic;
+        line-height: 35px;
+        padding-top: 25px;
+    }
+    
+    .text-left {
+        flex: 1;
+        background-color: rgb(244, 238, 222);
+        display: flex;
+    }
+    
+    .text-right {
+        flex: 1;
+        background-color: #d4e0ab;
+        display: flex;
+        position: relative;
+    }
+    
+    .text-right>.text-noidung {
+        /* text-align: left; */
+    }
+    
+    .noidungduoi img {
+        width: 350px;
+    }
+    
+    .anh_noidung {
+        flex: 1;
+    }
+    
+    .text-noidung {
+        text-align: center;
+        flex: 1;
+    }
+    
+    .text-noidung h4 {
+        font-size: 30px;
+        padding-top: 20px;
+    }
+    
+    .free_ship>img {
+        position: absolute;
+        bottom: 1px;
+        width: 300px;
+    }
+    
+    .text-noidung>a {
+        width: 130px;
+        height: 40px;
+        display: block;
+        line-height: 40px;
+        text-align: center;
+        margin: 15px auto;
+        border-radius: 20px;
+    }
+    
+    .btn_left {
+        border: 2px solid rgb(245, 181, 113);
+        color: rgb(245, 181, 113);
+    }
+    
+    .btn_left:hover {
+        background-color: rgb(245, 181, 113);
+        color: #fff;
+        transition: 0.4s ease-in;
+    }
+    
+    .btn_right {
+        border: 2px solid rgb(139, 157, 77);
+        color: rgb(139, 157, 77);
+    }
+    
+    .btn_right:hover {
+        background: rgb(139, 157, 77);
+        color: #fff;
+        transition: 0.4s ease-in;
+    }
+    /* sale */
+    /*sản phẩm mới*/
+    
+    .DM_SanPham {
+        margin: auto;
+        text-align: center;
+    }
+    
+    .list-SanPham {
+        width: 1200px;
+        margin: auto;
+    }
+    
+    .DM_SanPham>p {
+        text-align: center;
+        opacity: 0.3;
+        font-size: 14px;
+    }
+    
+    .DM_SanPham h3 {
+        text-transform: uppercase;
+        color: rgb(160, 168, 71);
+        margin-top: 50px;
+        font-size: 25px;
+    }
+    
+    .sanpham {
+        margin-top: 25px;
+        border: 1px solid rgb(243, 243, 243);
+        width: 265px;
+        height: 363px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .sanpham .infor_sp {
+        background-color: rgb(245, 246, 251);
+        height: 100px;
+        margin-top: 60px;
+    }
+    
+    .tensp {
+        margin-top: 20px;
+    }
+    
+    .infor_sp a {
+        color: #000;
+        line-height: 40px;
+        display: block;
+    }
+    
+    .infor_sp p {
+        display: inline;
+        margin: 0 10px;
+    }
+    
+    .sanpham .muahang {
+        position: absolute;
+        bottom: 120px;
+        min-width: 100%;
+        height: 35px;
+        opacity: 0;
+    }
+    
+    .muahang a {
+        background-color: rgb(235, 229, 229);
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        display: inline-block;
+        margin: 0px 8px;
+    }
+    
+    .muahang a i {
+        line-height: 35px;
+        display: block;
+        color: #fff;
+        border-radius: 50%;
+        background-color: rgb(197, 236, 87)
+    }
+    
+    .muahang a:hover,
+    .muahang a i:hover {
+        background-color: rgb(145, 173, 65);
+        color: #fff;
+        transition: 0.4s ease-in;
+    }
+    
+    .infor_sp p.giasale {
+        color: rgb(145, 173, 65);
+    }
+    
+    .infor_sp p.giagoc {
+        text-decoration-line: line-through;
+        color: rgb(112, 112, 112);
+    }
+    
+    .list-SanPham {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .list-SanPham img {
+        width: 200px;
+        transform: scale(1);
+        transition: all 0.3s;
+    }
+    
+    .sanpham:hover img {
+        transform: scale(1.1);
+    }
+    
+    .list-SanPham .sanpham:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        transition: 0.3s ease-in-out;
+    }
+    
+    .infor_sp a:hover {
+        color: rgb(145, 173, 65);
+        transition: 0.4s ease-in;
+    }
+    
+    .list-SanPham .sanpham:hover .muahang {
+        opacity: 1;
+    }
+    /* hotline liên hệ */
+    
+    .hotline_lienhe {
+        background-image: url('img/backgroud_hotline.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 300px;
+        text-align: center;
+        margin-top: 40px;
+    }
+    
+    .hotline_lienhe h2 {
+        color: #fff;
+        padding-top: 50px;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    
+    .hotline_lienhe a {
+        color: #fff;
+        font-size: 40px;
+    }
+    
+    .hotline_lienhe p {
+        color: #fff;
+        width: 500px;
+        margin: 20px auto;
+        font-style: italic;
+    }
+    /* tin tức */
+    
+    .wrapper_TinTuc {
+        width: 100%;
+        height: 650px;
+        text-align: center;
+    }
+    
+    .wrapper_TinTuc h2 {
+        text-transform: uppercase;
+        color: rgb(160, 168, 71);
+        margin-top: 60px;
+        font-size: 25px;
+    }
+    
+    .ds_TinTuc {
+        display: flex;
+        justify-content: space-between;
+        width: 1200px;
+        height: 550px;
+        margin: auto;
+        margin-top: 25px;
+    }
+    
+    .TinTuc a img {
+        width: 370px;
+        transition: all 0.7s ease;
+    }
+    
+    .ngaydangtin {
+        color: rgb(145, 173, 65);
+        background-color: rgb(231, 228, 228);
+        width: 370px;
+        height: 35px;
+        line-height: 35px;
+        margin: -5px 15px;
+        font-size: 13px;
+    }
+    
+    .dangTin {
+        color: #000;
+        opacity: 0.6;
+    }
+    
+    p.NguoiDangTin {
+        font-size: 15px;
+    }
+    
+    .ngaydangtin i {
+        margin: 0px 6px;
+    }
+    
+    .ngaydangtin p {
+        display: inline;
+    }
+    
+    .MoTa_Tintuc {
+        background-color: rgb(245, 246, 251);
+        width: 370px;
+        height: 120px;
+        margin: -5px 15px;
+        font-size: 13px;
+    }
+    
+    .MoTa_Tintuc a {
+        color: #000;
+    }
+    
+    .MoTa_Tintuc h4 {
+        width: 350px;
+        margin: auto;
+        font-size: 18px;
+        padding-top: 13px;
+    }
+    
+    .MoTa_Tintuc p {
+        width: 350px;
+        margin: auto;
+        padding-top: 8px;
+        opacity: 0.6;
+        line-height: 25px;
+    }
+    
+    .MoTa_Tintuc a:hover {
+        color: rgb(145, 173, 65);
+        transition: 0.4s ease-in;
+    }
+    
+    .TinTuc>a img:hover {
+        border-radius: 50%;
+    }
+    /* phần đăng kí nhận thông tin */
+    
+    .subscribe-TT {
+        width: 100%;
+        height: 232px;
+        background-image: url(https://food-03.web4s.vn/uploads/plugin/custom_img/2019-08-23/1566527241-1511252633-custom.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        display: flex;
+    }
+    
+    .text-subscribe-TT {
+        flex: 1;
+        text-align: center;
+    }
+    
+    .text-subscribe-TT h1 {
+        margin-top: 70px;
+        font-size: 25px;
+        line-height: 40px;
+        text-transform: uppercase;
+        opacity: 0.8;
+    }
+    
+    .text-subscribe-TT>p {
+        opacity: 0.6;
+    }
+    
+    .subscribe-TT-input {
+        flex: 1;
+    }
+    
+    .form-input {
+        background-color: #fff;
+        display: inline-block;
+        margin-top: 75px;
+        margin-left: 15px;
+    }
+    
+    .form-input input {
+        width: 400px;
+        height: 53px;
+        border: none;
+        padding-left: 10px;
+        outline: none;
+    }
+    
+    .form-input button {
+        width: 147px;
+        height: 53px;
+        background-color: rgb(183, 220, 54);
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-weight: 600;
+    }
+    
+    .form-input button:hover {
+        background-color: #f7b111;
+        transition: 0.4s ease-in;
+    }
+    /* footer */
+    
+    #wrapper-footer {
+        width: 100%;
+        height: auto;
+    }
+    
+    #wrapper-footer .footer {
+        display: flex;
+        height: 335px;
+        width: 1180px;
+        margin: auto;
+        padding: 0 20px;
+    }
+    
+    .footer h3 {
+        text-transform: uppercase;
+        font-size: 16px;
+        margin-top: 40px;
+    }
+    
+    .footer hr {
+        width: 30px;
+        border: 1.5px solid rgb(183, 220, 54);
+        background-color: rgb(183, 220, 54);
+    }
+    
+    .footer .footer-about {
+        flex: 1;
+    }
+    
+    .footer .footer-about p {
+        font-size: 13px;
+        line-height: 25.5px;
+        margin-top: 20px;
+        opacity: 0.7;
+    }
+    
+    .footer .footer-about ul {
+        list-style: none;
+        display: flex;
+        margin-top: 20px;
+    }
+    
+    .footer .footer-about ul li a {
+        font-size: 30px;
+        padding: 0 5px;
+    }
+    
+    .footer-about .fa-facebook {
+        color: rgb(98, 122, 173);
+    }
+    
+    .footer-about .fa-facebook:hover {
+        color: rgb(77, 96, 138);
+        transition: 0.4 ease-in;
+    }
+    
+    .footer-about .fa-twitter {
+        color: rgb(74, 180, 245);
+    }
+    
+    .footer-about .fa-twitter:hover {
+        color: rgb(68, 165, 224);
+        transition: 0.4 ease-in;
+    }
+    
+    .footer-about .fa-google-plus {
+        color: rgb(226, 105, 95);
+    }
+    
+    .footer-about .fa-google-plus:hover {
+        color: rgb(197, 93, 83);
+        transition: 0.4 ease-in;
+    }
+    
+    .footer-about .fa-pinterest {
+        color: rgb(277, 65, 72);
+    }
+    
+    .footer-about .fa-pinterest:hover {
+        color: rgb(179, 69, 59);
+        transition: 0.4 ease-in;
+    }
+    
+    .footer .footer-contact {
+        flex: 1;
+    }
+    
+    .footer-contact ul {
+        list-style: none;
+        margin-top: 20px;
+        line-height: 40px;
+        font-size: 14px;
+    }
+    
+    .footer-contact ul li i {
+        color: rgb(171, 207, 38);
+        padding: 0 5px;
+        font-size: 16px;
+    }
+    
+    .footer-contact ul li p {
+        display: inline-block;
+        opacity: 0.7;
+    }
+    
+    .footer .photo-in-insatgam {
+        flex: 1;
+    }
+    
+    .photo-in-insatgam img {
+        width: 90px;
+        transform: scale(1);
+        transition: all 0.3s;
+    }
+    
+    .photo-in-insatgam img:hover {
+        transform: scale(1.1);
+    }
+    
+    .photo-in-insatgam ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 30px;
+    }
+    
+    .photo-in-insatgam ul li {
+        flex-basis: 30%;
+        margin: auto;
+        overflow: hidden;
+    }
+    
+    .footer .business-hours {
+        flex: 1;
+        margin: auto;
+    }
+    
+    .business-hours-content {
+        border: 1px double rgb(230, 224, 224);
+        border-width: 5px;
+        width: 262px;
+        height: 230px;
+        text-align: center;
+        margin-left: 30px;
+    }
+    
+    .business-hours-content>img {
+        text-align: center;
+        margin-top: 16px;
+    }
+    
+    .business-hours-content .s1 {
+        margin-top: 40px;
+    }
+    
+    .business-hours-content p {
+        line-height: 35px;
+    }
+    
+    .business-hours-content p.title-business-hours {
+        opacity: 0.8;
+    }
+    
+    .business-hours-content p.text-business-hours {
+        opacity: 0.7;
+    }
+    
+    .no-coppy {
+        opacity: 0.6;
+        font-size: 15px;
+        text-align: center;
+    }
+    
+    .no-coppy {
+        margin-bottom: 10px;
+    }

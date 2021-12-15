@@ -1,0 +1,161 @@
+.slider-gioithieu a:hover {
+    color: green;
+}
+
+.wrapper_SanPhamBan {
+    margin-top: 80px;
+}
+
+.SanPhamBan {
+    display: flex;
+    width: 1000px;
+    margin: auto;
+}
+
+.ThongtinSP {
+    flex: 1;
+}
+
+.anhSanpham>img {
+    width: 430px;
+}
+
+.ThongtinSP>h3 {
+    text-indent: 25px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 30px;
+    margin: 15px 0px;
+    font-weight: 400;
+}
+
+.dongia_SP {
+    text-indent: 25px;
+    line-height: 50px;
+    font-size: 25px;
+    color: rgb(145, 173, 65);
+}
+
+.thongtinMota_sp {
+    text-indent: 25px;
+    color: rgb(83, 83, 83);
+}
+
+.tinhtrangSP>hr {
+    width: 400px;
+    background-color: rgb(255, 255, 255);
+    margin: 20px 25px;
+    opacity: 0.4;
+}
+
+.tinhtrangSP ul {
+    list-style: none;
+    display: flex;
+}
+
+.tinhtrangSP ul li {
+    padding: 0 25px;
+}
+
+.tinhtrangSP ul li:first-child {
+    border-right: 1px solid #000;
+}
+
+.tenThuonghieu {
+    color: rgb(145, 173, 65);
+}
+
+.TrangThai {
+    color: rgb(145, 173, 65);
+}
+
+.tinhtrangSP ul li p {
+    display: inline;
+    text-align: center;
+    opacity: 0.9;
+}
+
+.chonMua_SP p {
+    display: inline;
+    padding-left: 25px;
+}
+
+.chonMua_SP ul.soluongMua_sp {
+    list-style: none;
+    display: inline-flex;
+    padding-left: 15px;
+}
+
+.chonMua_SP ul.soluongMua_sp>li {
+    padding: 0 20px;
+    border: 1px solid rgb(187, 187, 187);
+    cursor: pointer;
+}
+
+.ThongtinSP>a {
+    display: inline-block;
+    border: 1px solid rgb(145, 173, 65);
+    width: 250px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin: 25px 25px;
+    border-radius: 20px;
+    color: #fff;
+    background-image: -webkit-linear-gradient( 35deg, #91ad41 0%, #ff8a6c 100%)!important;
+    font-family: "Quicksand", sans-serif;
+}
+
+.ThongtinSP>a:hover {
+    color: #91ad41 !important;
+    border: 1px solid #91ad41;
+    background: #fff !important;
+    transition: 0.4s ease-in;
+}
+
+.CacAnhsp {
+    list-style: none;
+    display: flex;
+    width: 1000px;
+    margin: 40px auto;
+}
+
+.CacAnhsp li {
+    padding-left: 20px;
+}
+
+.CacAnhsp li img {
+    width: 100px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.MoTaSanPham {
+    font-family: "Quicksand", sans-serif;
+    text-align: justify;
+    width: 1100px;
+    margin: auto;
+    line-height: 25px;
+}
+
+.MoTaSanPham>h3 {
+    font-size: 30px;
+    margin: 25px 0px;
+    font-weight: 400;
+    opacity: 0.7;
+    text-align: center;
+}
+
+.MoTaSanPham>h4 {
+    font-size: 20px;
+    margin: 15px 0px;
+    font-weight: 400;
+    opacity: 0.7;
+}
+
+.MoTaSanPham>p {
+    opacity: 0.5;
+}
+
+.wrapper-SanPhamLienquan {
+    margin-bottom: 40px;
+}
